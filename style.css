@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+
 body {
     background-color: #131316;
     color: white;
+    font-family: 'Nabla', cursive;
+    padding: 0;
+    margin: 0;
 }
 
 section {
@@ -12,9 +17,19 @@ section {
 
 .hidden {
     opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-10%) translateY(+5%);
     transition: all 1s;
+}
+
+@media(preferes-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
 }
 
 .show {
     opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) translateY(0);
 }
