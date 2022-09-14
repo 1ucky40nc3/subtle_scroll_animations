@@ -4,8 +4,12 @@ body {
     background-color: #131316;
     color: white;
     font-family: 'Nabla', cursive;
-    padding: 0;
+    padding: 0px;
     margin: 0;
+}
+
+#title {
+    padding-left: 30px;
 }
 
 section {
