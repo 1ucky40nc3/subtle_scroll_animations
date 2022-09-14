@@ -19,6 +19,7 @@ section {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-10%) translateY(+5%);
+    border-radius: 0;
     transition: all 1s;
 }
 
@@ -31,5 +32,40 @@ section {
 .show {
     opacity: 1;
     filter: blur(0);
+    border-radius: 20px;
     transform: translateX(0) translateY(0);
 }
+
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    padding: 8px;
+    margin: 4px;
+
+    border: 1px solid;
+    border-color: blanchedalmond;
+    border-radius: 50px 75px 50px 50px /
+                   75px 25px 75px 25px;
+    transform: rotate(-2deg);
+    animation: wobble 15s ease-in-out alternate infinite;
+}
+
+
+@keyframes wobble {
+    50% {
+      border-radius: 75px 55px 35px 75px /
+                     35px 75px 55px 45px;
+    }
+    100% {
+      border-radius: 75px 25px 75px 25px /
+                     25px 75px 25px 75px;
+    }
+}
+
